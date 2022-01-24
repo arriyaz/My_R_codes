@@ -266,7 +266,7 @@ chikw
 
 ---------------
 
-### Saving Data as a file
+### Saving Data as a  csv file
 
 
 ```R
@@ -279,9 +279,10 @@ dir.create("data2")
 write.csv(DNase, "data/2.DNase_data.csv", row.names=FALSE)
 ```
 
+### Saving data as a tsv file
 
 ```R
-ToothGrowth
+write.table(df, "filename.tsv", sep = "\t", row.names = FALSE)
 ```
 
 ---------
