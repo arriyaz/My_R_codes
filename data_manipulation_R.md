@@ -3,3 +3,22 @@
 ```R
 which(colnames(df)=="columnName" )
 ```
+## Save a plot as svg image in R
+```R
+svglite("path/plot_name.svg",
+        width =3,
+        height =3)
+#plot
+plot_object
+
+dev.off()
+```
+## Save a plot as svg image in R
+png("path/plot_name.png",
+        width=3000,
+        height =3000,
+        res=600)
+#plot
+plot_object
+
+dev.off()
