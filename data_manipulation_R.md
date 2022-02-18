@@ -14,6 +14,8 @@ plot_object
 dev.off()
 ```
 ## Save a plot as svg image in R
+
+```R
 png("path/plot_name.png",
         width=3000,
         height =3000,
@@ -22,3 +24,4 @@ png("path/plot_name.png",
 plot_object
 
 dev.off()
+```
