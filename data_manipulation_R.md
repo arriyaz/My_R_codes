@@ -25,3 +25,16 @@ plot_object
 
 dev.off()
 ```
+
+## To save all objects in a R script
+
+```R
+save.image("Some_Name.RData")
+```
+
+## To load all objects in a R script
+```R
+laod("Some_Name.RData")
+```
+
+
