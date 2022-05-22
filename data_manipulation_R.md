@@ -13,8 +13,7 @@ plot_object
 
 dev.off()
 ```
--------
-## To make the texts editable in svg file from svglite() R function
+### To make the texts editable in svg file from svglite() R function
 First run the follwoing code on the desired svg file, then open the file in **Inkscape**. Then you will find the all text can be edited.
 Run the following code in bash terminal
 
@@ -23,7 +22,7 @@ sed -i "s/ textLength='[^']*'//" file.svg
 ```
 -------
 
-### Save a plot as png image in R
+## Save a plot as png image in R
 
 ```R
 png("path/plot_name.png",
