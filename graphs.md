@@ -50,4 +50,4 @@ ggplot(diamonds, aes(x = price, y = cut, fill = cut)) +
         legend.position = "none")
 ```
 **Output**
-![A basic Ridgeline plot](./images/basic-ridgeline-plot.png)
+![A basic Ridgeline plot](./graph_images/basic-ridgeline-plot.png)
