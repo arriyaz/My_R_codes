@@ -13,7 +13,7 @@ plot_object
 
 dev.off()
 ```
-## Save a plot as svg image in R
+## Save a plot as png image in R
 
 ```R
 png("path/plot_name.png",
