@@ -23,7 +23,7 @@ sed -i "s/ textLength='[^']*'//" file.svg
 ```
 -------
 
-## Save a plot as png image in R
+### Save a plot as png image in R
 
 ```R
 png("path/plot_name.png",
