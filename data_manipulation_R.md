@@ -5,6 +5,9 @@ which(colnames(df)=="columnName" )
 ```
 ## Save a plot as svg image in R
 ```R
+# load library
+library(svglite)
+
 svglite("path/plot_name.svg",
         width =3,
         height =3)
