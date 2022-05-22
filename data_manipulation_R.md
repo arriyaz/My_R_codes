@@ -34,7 +34,7 @@ save.image("Some_Name.RData")
 
 ## To load all objects in a R script
 ```R
-laod("Some_Name.RData")
+load("Some_Name.RData")
 ```
 
 
