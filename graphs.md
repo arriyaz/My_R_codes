@@ -1,3 +1,27 @@
+# Save graphs in SVG format
+```R
+# load library
+library(svglite)
+
+svglite("graph-name.svg",
+        width =4,
+        height =5)
+#plot
+plot_object_name
+
+dev.off()
+```
+# Save graphs in PNG format
+```R
+png(file="graph-name.png",
+       width = 3500,
+       height = 1400,
+       res = 600)
+plot_objece_name
+
+dev.off()
+```
+
 # Ridgeline Plot
 ## Basic Ridgeline Plot
 ```R
@@ -25,3 +49,5 @@ ggplot(diamonds, aes(x = price, y = cut, fill = cut)) +
         axis.text.y = element_text(size = 8, face = "bold"),
         legend.position = "none")
 ```
+**Output**
+![A basic Ridgeline plot](./images/basic-ridgeline-plot.png)
