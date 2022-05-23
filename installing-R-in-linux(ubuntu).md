@@ -44,7 +44,7 @@ So, you have to install different kernels with different names for every version
 
 **Here, we have installed `R 4.1.0` inside the `r-env` environment**, so for simplicity, we will give the kernel name according to the environment name and displayname of the kernel according to the R version (it is not a specific rule, I am doing this for my ease of use)
 
-### Now, run R in the terminal:
+#### Now, run R in the terminal:
 ```bash
 R
 ```
