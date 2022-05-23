@@ -1,3 +1,4 @@
+# Install R in `conda` in Linux
 ## 1. Install necessary dependencies:
 
 ```bash
@@ -59,5 +60,70 @@ After installing the kernel in this way you can access this kernel from the jupy
 ![R_kernel_in_jupyterlab](./graph_images/Kernel_image.png)
 
 >> **NB**: If you install another R version in another conda environment, don’t forget to change the `name` and `displayname` option in the above code.
+
+## 4. Install R packages
+Once you install r via conda, you will be able to install packages either by,
+```bash
+conda install -c channelname r-packagename
+```
+Or by from R console,
+```R
+install.packages("PackageName")
+```
+**NB**: When we use **R** from conda, installing packages by `install.packages("PackageName")` almost always causes problem. So using `conda` is or `mamba` command is better.
+
+-------------
+For more details about IRkernel installation, see these three links below:
+1. [Developer instruction](https://irkernel.github.io/installation/#linux-panel)
+2. [Github link of the IRkernel package](https://github.com/IRkernel/IRkernel)
+3. [Man page](https://rdrr.io/github/IRkernel/IRkernel/man/installspec.html)
+--------------
+
+# Uninstall a kernel from jupyter
+First, activate that specific environment from which you want to remove the kernel
+Then run the following code in the terminal
+```bash
+jupyter kernelspec list
+```
+You will see available kernel and their paths as below  
+![kernel-list](./graph_images/kernel_list.png)
+
+To remove a specific kernel, let’s say ir33 from the above image run the following code;
+```bash
+jupyter kernelspec uninstall ir33
+```
+Or,
+```bash
+jupyter kernelspec remove ir33
+```
+
+# Removing R from Ubuntu system
+By default **Ubuntu** comes with pre-installed R. But, I may causes problem with **R** installed in conda. So it is preferable to completely remove **R** from the **Ubuntu system**.
+
+The following code will remove R that was installed by sudo apt, not by conda.
+
+To remove `core-r`
+```bash
+sudo apt-get remove r-base-core
+sudo apt-get remove r-base
+sudo apt-get autoremove
+```
+But The above code will not remove the installed packages.
+
+To remove all installed packages first run the following code from the terminal, to get the list of folders where all the packages were installed:
+```bash
+R -e '.libPaths()'
+```
+The above code will give output as like below:  
+![r_libpath](./graph_images/r_libpath.png)
+
+Now you have to remove/delete each of the directories by rm command along with the -r flag. For example;
+```bash
+sudo rm -r /home/arriyaz/R/x86_64-pc-linux-gnu-library/4.1
+```
+Run such a command for every directory in the list.
+
+**Thus you will completely remove R as well as installed packages from your ubuntu.**
+
 
 
