@@ -1,3 +1,25 @@
+## Check the list of all available Functions in a package
+We can you `help` command:
+```R
+help(package = dplyr)
+```
+
+After loading a library,
+Then to check all the instance (functions):
+```R
+lsf.str("package:dplyr")
+```
+
+To list all objects in the package use 
+```R
+ls("package:dplyr")
+```
+
+To check all the loaded package:
+```R
+search()
+```
+
 ## Take user input and print it with other string.
 There are two common method to take **input** in R.  
 - `readline()` method
